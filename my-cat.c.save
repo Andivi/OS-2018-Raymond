@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+                    int
+                    main(int argc, char *argv[])
+{
+    if (argc < 2)
+    {
+        printf(" There is not enough argument");
+        exit(0);
+    }
+    for (int i ; i < argc - 1; i++)
+    {
+        FILE *fp = fopen(argv[i], "r");
+        if (fp == NULL)
+        {
+            printf("cannot open file\n");
+            exit(0);
+        }
+         int k;
+    while ((k = fgetc(fp)) != EOF)
+    {
+        putchar(k);
+    }
+    }
+   
+}
+
